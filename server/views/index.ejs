@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="disc">
+        <h1>hello world</h1>
+        <form action="/api" method="POST">
+            <input type="text" name="inputText" id="inputText">
+            <input type="submit" value="Generate!">
+        </form>
+    </div>
+
+    <% console.log(pixel) %>
+
+    <% for (var i=0; i < 20; i++) { %>
+        <div class="row">
+            <% for (var j=0; j < 80; j++) { %>
+                <% if(Math.floor(Math.random() * 2) == 0) { %>
+                <div class="label" id="j-i"></div>
+                <%} else {%>
+                <div class="label on" id="j-i"></div>
+                <% } %>
+            <% } %>
+        </div>
+    <% } %>
+  
+
+
+    <style>
+        .on {
+            background-color: black !important;
+        }
+        .disc {
+            text-align: center;
+            margin: 1rem;
+        }
+        .label{
+            background-color: aqua;
+            height: 30px;
+            width: 30px;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</body>
+</html>
